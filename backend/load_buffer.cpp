@@ -60,6 +60,16 @@ void LoadBuffer::flush() {
 void LoadBuffer::check([[maybe_unused]] unsigned addr,
                        [[maybe_unused]] unsigned robIdx,
                        [[maybe_unused]] unsigned robPopPtr) {
-    // TODO: 完成 Load Buffer 的检验逻辑，寻找顺序错误的 load 指令
-    throw std::runtime_error("Load Buffer Check not implemented");
+    // 完成 Load Buffer 的检验逻辑，寻找顺序错误的 load 指令
+    // 按照规则查询顺序在该 Store 指令之后，但已经完成推测执行的 Load 指令
+    // 将这些 load 指令的 load buffer 表项设置为 invalid
+    for (auto &slot : buffer) {
+        if (!slot.valid) {
+            if ((robIdx < slot.robIdx && slot.robIdx < robPopPtr) ||
+                (robPopPtr <= robIdx && slot.robIdx < robPopPtr) ||
+                (robPopPtr <= robIdx && robIdx < slot.robIdx)) {
+                slot.invalidate = true;
+            }
+        }
+    }
 }

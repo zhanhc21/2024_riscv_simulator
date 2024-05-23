@@ -4,7 +4,6 @@
 
 #include "logger.h"
 
-
 StoreBuffer::StoreBuffer() {
     pushPtr = popPtr = 0;
     for (auto &slot : buffer) {
@@ -75,9 +74,27 @@ void StoreBuffer::flush() {
  * @return std::optional<unsigned> 如果在Store
  * Buffer中命中，返回对应值，否则返回std::nullopt
  */
-std::optional<unsigned> StoreBuffer::query([[maybe_unused]] unsigned addr,
-                                           [[maybe_unused]] unsigned robIdx,
-                                           [[maybe_unused]] unsigned robPopPtr) {
-    // TODO: 完成 Store Buffer 的查询逻辑
-    throw std::runtime_error("Store Buffer query not implemented.");
+std::optional<unsigned> StoreBuffer::query(
+    [[maybe_unused]] unsigned addr,
+    [[maybe_unused]] unsigned robIdx,
+    [[maybe_unused]] unsigned robPopPtr) {
+    // 需要倒序遍历 Store Buffer 的全部项目, 找到第一个 rob 顺序（注意不是序号）在当前指令之前, 且地址相同的条目进行返回
+    auto tail = pushPtr - 1;
+    if (pushPtr == 0) {
+        tail = ROB_SIZE - 1;
+    }
+    unsigned mask = 0xFFFFFFFC;
+    bool mark_current = false;
+    while (tail >= popPtr) {
+        if ((buffer[tail].storeAddress & mask) == (addr & mask) &&
+            buffer[tail].valid &&
+            mark_current) {
+            return std::make_optional(buffer[tail].storeData);
+        }
+        if (buffer[tail].robIdx == robIdx && buffer[tail].valid) {
+            mark_current = true;
+        }
+        --tail;
+    }
+    return std::nullopt;
 }
