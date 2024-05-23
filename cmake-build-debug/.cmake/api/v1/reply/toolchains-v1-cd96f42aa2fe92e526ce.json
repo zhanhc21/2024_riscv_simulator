@@ -1,0 +1,67 @@
+{
+	"kind" : "toolchains",
+	"toolchains" : 
+	[
+		{
+			"compiler" : 
+			{
+				"id" : "GNU",
+				"implicit" : 
+				{
+					"includeDirectories" : 
+					[
+						"D:/IDE/CLion 2023.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++",
+						"D:/IDE/CLion 2023.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32",
+						"D:/IDE/CLion 2023.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/backward",
+						"D:/IDE/CLion 2023.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include",
+						"D:/IDE/CLion 2023.1/bin/mingw/include",
+						"D:/IDE/CLion 2023.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include-fixed",
+						"D:/IDE/CLion 2023.1/bin/mingw/x86_64-w64-mingw32/include"
+					],
+					"linkDirectories" : [],
+					"linkFrameworkDirectories" : [],
+					"linkLibraries" : []
+				},
+				"path" : "D:/IDE/CLion 2023.1/bin/mingw/bin/g++.exe",
+				"version" : "13.1.0"
+			},
+			"language" : "CXX",
+			"sourceFileExtensions" : 
+			[
+				"C",
+				"M",
+				"c++",
+				"cc",
+				"cpp",
+				"cxx",
+				"m",
+				"mm",
+				"mpp",
+				"CPP",
+				"ixx",
+				"cppm",
+				"ccm",
+				"cxxm",
+				"c++m"
+			]
+		},
+		{
+			"compiler" : 
+			{
+				"implicit" : {},
+				"path" : "D:/IDE/CLion 2023.1/bin/mingw/bin/windres.exe"
+			},
+			"language" : "RC",
+			"sourceFileExtensions" : 
+			[
+				"rc",
+				"RC"
+			]
+		}
+	],
+	"version" : 
+	{
+		"major" : 1,
+		"minor" : 0
+	}
+}

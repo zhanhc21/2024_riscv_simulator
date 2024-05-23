@@ -1,0 +1,224 @@
+[
+{
+  "directory": "D:/THU_21/2024_Spring/计算机系统结构/labs-2021050009/cmake-build-debug",
+  "command": "D:\\IDE\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE -ID:/THU_21/2024_Spring/计算机系统结构/labs-2021050009/include -g -std=c++17 -fdiagnostics-color=always -Wall -W -Wextra -Werror -o CMakeFiles\\CommonLibrary.dir\\common\\instructions.cpp.obj -c D:\\THU_21\\2024_Spring\\计算机系统结构\\labs-2021050009\\common\\instructions.cpp",
+  "file": "D:\\THU_21\\2024_Spring\\计算机系统结构\\labs-2021050009\\common\\instructions.cpp",
+  "output": "CMakeFiles\\CommonLibrary.dir\\common\\instructions.cpp.obj"
+},
+{
+  "directory": "D:/THU_21/2024_Spring/计算机系统结构/labs-2021050009/cmake-build-debug",
+  "command": "D:\\IDE\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE -ID:/THU_21/2024_Spring/计算机系统结构/labs-2021050009/include -g -std=c++17 -fdiagnostics-color=always -Wall -W -Wextra -Werror -o CMakeFiles\\CommonLibrary.dir\\common\\logger.cpp.obj -c D:\\THU_21\\2024_Spring\\计算机系统结构\\labs-2021050009\\common\\logger.cpp",
+  "file": "D:\\THU_21\\2024_Spring\\计算机系统结构\\labs-2021050009\\common\\logger.cpp",
+  "output": "CMakeFiles\\CommonLibrary.dir\\common\\logger.cpp.obj"
+},
+{
+  "directory": "D:/THU_21/2024_Spring/计算机系统结构/labs-2021050009/cmake-build-debug",
+  "command": "D:\\IDE\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE -ID:/THU_21/2024_Spring/计算机系统结构/labs-2021050009/include -g -std=c++17 -fdiagnostics-color=always -Wall -W -Wextra -Werror -o CMakeFiles\\CommonLibrary.dir\\common\\masked_literal.cpp.obj -c D:\\THU_21\\2024_Spring\\计算机系统结构\\labs-2021050009\\common\\masked_literal.cpp",
+  "file": "D:\\THU_21\\2024_Spring\\计算机系统结构\\labs-2021050009\\common\\masked_literal.cpp",
+  "output": "CMakeFiles\\CommonLibrary.dir\\common\\masked_literal.cpp.obj"
+},
+{
+  "directory": "D:/THU_21/2024_Spring/计算机系统结构/labs-2021050009/cmake-build-debug",
+  "command": "D:\\IDE\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE -ID:/THU_21/2024_Spring/计算机系统结构/labs-2021050009/include -g -std=c++17 -fdiagnostics-color=always -Wall -W -Wextra -Werror -o CMakeFiles\\CommonLibrary.dir\\common\\memory.cpp.obj -c D:\\THU_21\\2024_Spring\\计算机系统结构\\labs-2021050009\\common\\memory.cpp",
+  "file": "D:\\THU_21\\2024_Spring\\计算机系统结构\\labs-2021050009\\common\\memory.cpp",
+  "output": "CMakeFiles\\CommonLibrary.dir\\common\\memory.cpp.obj"
+},
+{
+  "directory": "D:/THU_21/2024_Spring/计算机系统结构/labs-2021050009/cmake-build-debug",
+  "command": "D:\\IDE\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE -ID:/THU_21/2024_Spring/计算机系统结构/labs-2021050009/include -g -std=c++17 -fdiagnostics-color=always -Wall -W -Wextra -Werror -o CMakeFiles\\CommonLibrary.dir\\common\\processor.cpp.obj -c D:\\THU_21\\2024_Spring\\计算机系统结构\\labs-2021050009\\common\\processor.cpp",
+  "file": "D:\\THU_21\\2024_Spring\\计算机系统结构\\labs-2021050009\\common\\processor.cpp",
+  "output": "CMakeFiles\\CommonLibrary.dir\\common\\processor.cpp.obj"
+},
+{
+  "directory": "D:/THU_21/2024_Spring/计算机系统结构/labs-2021050009/cmake-build-debug",
+  "command": "D:\\IDE\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE -ID:/THU_21/2024_Spring/计算机系统结构/labs-2021050009/include -g -std=c++17 -fdiagnostics-color=always -Wall -W -Wextra -Werror -o CMakeFiles\\CommonLibrary.dir\\common\\processor_wc.cpp.obj -c D:\\THU_21\\2024_Spring\\计算机系统结构\\labs-2021050009\\common\\processor_wc.cpp",
+  "file": "D:\\THU_21\\2024_Spring\\计算机系统结构\\labs-2021050009\\common\\processor_wc.cpp",
+  "output": "CMakeFiles\\CommonLibrary.dir\\common\\processor_wc.cpp.obj"
+},
+{
+  "directory": "D:/THU_21/2024_Spring/计算机系统结构/labs-2021050009/cmake-build-debug",
+  "command": "D:\\IDE\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE -ID:/THU_21/2024_Spring/计算机系统结构/labs-2021050009/include -g -std=c++17 -fdiagnostics-color=always -Wall -W -Wextra -Werror -o CMakeFiles\\CommonLibrary.dir\\common\\processor_wp.cpp.obj -c D:\\THU_21\\2024_Spring\\计算机系统结构\\labs-2021050009\\common\\processor_wp.cpp",
+  "file": "D:\\THU_21\\2024_Spring\\计算机系统结构\\labs-2021050009\\common\\processor_wp.cpp",
+  "output": "CMakeFiles\\CommonLibrary.dir\\common\\processor_wp.cpp.obj"
+},
+{
+  "directory": "D:/THU_21/2024_Spring/计算机系统结构/labs-2021050009/cmake-build-debug",
+  "command": "D:\\IDE\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE -ID:/THU_21/2024_Spring/计算机系统结构/labs-2021050009/include -g -std=c++17 -fdiagnostics-color=always -Wall -W -Wextra -Werror -o CMakeFiles\\CommonLibrary.dir\\common\\register_file.cpp.obj -c D:\\THU_21\\2024_Spring\\计算机系统结构\\labs-2021050009\\common\\register_file.cpp",
+  "file": "D:\\THU_21\\2024_Spring\\计算机系统结构\\labs-2021050009\\common\\register_file.cpp",
+  "output": "CMakeFiles\\CommonLibrary.dir\\common\\register_file.cpp.obj"
+},
+{
+  "directory": "D:/THU_21/2024_Spring/计算机系统结构/labs-2021050009/cmake-build-debug",
+  "command": "D:\\IDE\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE -ID:/THU_21/2024_Spring/计算机系统结构/labs-2021050009/include -g -std=c++17 -fdiagnostics-color=always -Wall -W -Wextra -Werror -o CMakeFiles\\CommonLibrary.dir\\common\\runner.cpp.obj -c D:\\THU_21\\2024_Spring\\计算机系统结构\\labs-2021050009\\common\\runner.cpp",
+  "file": "D:\\THU_21\\2024_Spring\\计算机系统结构\\labs-2021050009\\common\\runner.cpp",
+  "output": "CMakeFiles\\CommonLibrary.dir\\common\\runner.cpp.obj"
+},
+{
+  "directory": "D:/THU_21/2024_Spring/计算机系统结构/labs-2021050009/cmake-build-debug",
+  "command": "D:\\IDE\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE -ID:/THU_21/2024_Spring/计算机系统结构/labs-2021050009/include -g -std=c++17 -fdiagnostics-color=always -Wall -W -Wextra -Werror -o CMakeFiles\\CommonLibrary.dir\\common\\utils.cpp.obj -c D:\\THU_21\\2024_Spring\\计算机系统结构\\labs-2021050009\\common\\utils.cpp",
+  "file": "D:\\THU_21\\2024_Spring\\计算机系统结构\\labs-2021050009\\common\\utils.cpp",
+  "output": "CMakeFiles\\CommonLibrary.dir\\common\\utils.cpp.obj"
+},
+{
+  "directory": "D:/THU_21/2024_Spring/计算机系统结构/labs-2021050009/cmake-build-debug",
+  "command": "D:\\IDE\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE -ID:/THU_21/2024_Spring/计算机系统结构/labs-2021050009/include -g -std=c++17 -fdiagnostics-color=always -Wall -W -Wextra -Werror -o CMakeFiles\\instruction-test.dir\\program\\instruction_test.cpp.obj -c D:\\THU_21\\2024_Spring\\计算机系统结构\\labs-2021050009\\program\\instruction_test.cpp",
+  "file": "D:\\THU_21\\2024_Spring\\计算机系统结构\\labs-2021050009\\program\\instruction_test.cpp",
+  "output": "CMakeFiles\\instruction-test.dir\\program\\instruction_test.cpp.obj"
+},
+{
+  "directory": "D:/THU_21/2024_Spring/计算机系统结构/labs-2021050009/cmake-build-debug",
+  "command": "D:\\IDE\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE -ID:/THU_21/2024_Spring/计算机系统结构/labs-2021050009/include -g -std=c++17 -fdiagnostics-color=always -Wall -W -Wextra -Werror -o CMakeFiles\\elf-test.dir\\program\\elf_test.cpp.obj -c D:\\THU_21\\2024_Spring\\计算机系统结构\\labs-2021050009\\program\\elf_test.cpp",
+  "file": "D:\\THU_21\\2024_Spring\\计算机系统结构\\labs-2021050009\\program\\elf_test.cpp",
+  "output": "CMakeFiles\\elf-test.dir\\program\\elf_test.cpp.obj"
+},
+{
+  "directory": "D:/THU_21/2024_Spring/计算机系统结构/labs-2021050009/cmake-build-debug",
+  "command": "D:\\IDE\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE -ID:/THU_21/2024_Spring/计算机系统结构/labs-2021050009/include -g -std=c++17 -fdiagnostics-color=always -Wall -W -Wextra -Werror -o CMakeFiles\\FrontendLibrary.dir\\frontend\\frontend_base.cpp.obj -c D:\\THU_21\\2024_Spring\\计算机系统结构\\labs-2021050009\\frontend\\frontend_base.cpp",
+  "file": "D:\\THU_21\\2024_Spring\\计算机系统结构\\labs-2021050009\\frontend\\frontend_base.cpp",
+  "output": "CMakeFiles\\FrontendLibrary.dir\\frontend\\frontend_base.cpp.obj"
+},
+{
+  "directory": "D:/THU_21/2024_Spring/计算机系统结构/labs-2021050009/cmake-build-debug",
+  "command": "D:\\IDE\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE -ID:/THU_21/2024_Spring/计算机系统结构/labs-2021050009/include -g -std=c++17 -fdiagnostics-color=always -Wall -W -Wextra -Werror -o CMakeFiles\\FrontendLibrary.dir\\frontend\\frontend_wp.cpp.obj -c D:\\THU_21\\2024_Spring\\计算机系统结构\\labs-2021050009\\frontend\\frontend_wp.cpp",
+  "file": "D:\\THU_21\\2024_Spring\\计算机系统结构\\labs-2021050009\\frontend\\frontend_wp.cpp",
+  "output": "CMakeFiles\\FrontendLibrary.dir\\frontend\\frontend_wp.cpp.obj"
+},
+{
+  "directory": "D:/THU_21/2024_Spring/计算机系统结构/labs-2021050009/cmake-build-debug",
+  "command": "D:\\IDE\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE -ID:/THU_21/2024_Spring/计算机系统结构/labs-2021050009/include -g -std=c++17 -fdiagnostics-color=always -Wall -W -Wextra -Werror -o CMakeFiles\\BackendLibrary.dir\\backend\\backend.cpp.obj -c D:\\THU_21\\2024_Spring\\计算机系统结构\\labs-2021050009\\backend\\backend.cpp",
+  "file": "D:\\THU_21\\2024_Spring\\计算机系统结构\\labs-2021050009\\backend\\backend.cpp",
+  "output": "CMakeFiles\\BackendLibrary.dir\\backend\\backend.cpp.obj"
+},
+{
+  "directory": "D:/THU_21/2024_Spring/计算机系统结构/labs-2021050009/cmake-build-debug",
+  "command": "D:\\IDE\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE -ID:/THU_21/2024_Spring/计算机系统结构/labs-2021050009/include -g -std=c++17 -fdiagnostics-color=always -Wall -W -Wextra -Werror -o CMakeFiles\\BackendLibrary.dir\\backend\\backend_commit.cpp.obj -c D:\\THU_21\\2024_Spring\\计算机系统结构\\labs-2021050009\\backend\\backend_commit.cpp",
+  "file": "D:\\THU_21\\2024_Spring\\计算机系统结构\\labs-2021050009\\backend\\backend_commit.cpp",
+  "output": "CMakeFiles\\BackendLibrary.dir\\backend\\backend_commit.cpp.obj"
+},
+{
+  "directory": "D:/THU_21/2024_Spring/计算机系统结构/labs-2021050009/cmake-build-debug",
+  "command": "D:\\IDE\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE -ID:/THU_21/2024_Spring/计算机系统结构/labs-2021050009/include -g -std=c++17 -fdiagnostics-color=always -Wall -W -Wextra -Werror -o CMakeFiles\\BackendLibrary.dir\\backend\\backend_wc.cpp.obj -c D:\\THU_21\\2024_Spring\\计算机系统结构\\labs-2021050009\\backend\\backend_wc.cpp",
+  "file": "D:\\THU_21\\2024_Spring\\计算机系统结构\\labs-2021050009\\backend\\backend_wc.cpp",
+  "output": "CMakeFiles\\BackendLibrary.dir\\backend\\backend_wc.cpp.obj"
+},
+{
+  "directory": "D:/THU_21/2024_Spring/计算机系统结构/labs-2021050009/cmake-build-debug",
+  "command": "D:\\IDE\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE -ID:/THU_21/2024_Spring/计算机系统结构/labs-2021050009/include -g -std=c++17 -fdiagnostics-color=always -Wall -W -Wextra -Werror -o CMakeFiles\\BackendLibrary.dir\\backend\\execute_pipeline.cpp.obj -c D:\\THU_21\\2024_Spring\\计算机系统结构\\labs-2021050009\\backend\\execute_pipeline.cpp",
+  "file": "D:\\THU_21\\2024_Spring\\计算机系统结构\\labs-2021050009\\backend\\execute_pipeline.cpp",
+  "output": "CMakeFiles\\BackendLibrary.dir\\backend\\execute_pipeline.cpp.obj"
+},
+{
+  "directory": "D:/THU_21/2024_Spring/计算机系统结构/labs-2021050009/cmake-build-debug",
+  "command": "D:\\IDE\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE -ID:/THU_21/2024_Spring/计算机系统结构/labs-2021050009/include -g -std=c++17 -fdiagnostics-color=always -Wall -W -Wextra -Werror -o CMakeFiles\\BackendLibrary.dir\\backend\\load_buffer.cpp.obj -c D:\\THU_21\\2024_Spring\\计算机系统结构\\labs-2021050009\\backend\\load_buffer.cpp",
+  "file": "D:\\THU_21\\2024_Spring\\计算机系统结构\\labs-2021050009\\backend\\load_buffer.cpp",
+  "output": "CMakeFiles\\BackendLibrary.dir\\backend\\load_buffer.cpp.obj"
+},
+{
+  "directory": "D:/THU_21/2024_Spring/计算机系统结构/labs-2021050009/cmake-build-debug",
+  "command": "D:\\IDE\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE -ID:/THU_21/2024_Spring/计算机系统结构/labs-2021050009/include -g -std=c++17 -fdiagnostics-color=always -Wall -W -Wextra -Werror -o CMakeFiles\\BackendLibrary.dir\\backend\\rob.cpp.obj -c D:\\THU_21\\2024_Spring\\计算机系统结构\\labs-2021050009\\backend\\rob.cpp",
+  "file": "D:\\THU_21\\2024_Spring\\计算机系统结构\\labs-2021050009\\backend\\rob.cpp",
+  "output": "CMakeFiles\\BackendLibrary.dir\\backend\\rob.cpp.obj"
+},
+{
+  "directory": "D:/THU_21/2024_Spring/计算机系统结构/labs-2021050009/cmake-build-debug",
+  "command": "D:\\IDE\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE -ID:/THU_21/2024_Spring/计算机系统结构/labs-2021050009/include -g -std=c++17 -fdiagnostics-color=always -Wall -W -Wextra -Werror -o CMakeFiles\\BackendLibrary.dir\\backend\\store_buffer.cpp.obj -c D:\\THU_21\\2024_Spring\\计算机系统结构\\labs-2021050009\\backend\\store_buffer.cpp",
+  "file": "D:\\THU_21\\2024_Spring\\计算机系统结构\\labs-2021050009\\backend\\store_buffer.cpp",
+  "output": "CMakeFiles\\BackendLibrary.dir\\backend\\store_buffer.cpp.obj"
+},
+{
+  "directory": "D:/THU_21/2024_Spring/计算机系统结构/labs-2021050009/cmake-build-debug",
+  "command": "D:\\IDE\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE -ID:/THU_21/2024_Spring/计算机系统结构/labs-2021050009/include -g -std=c++17 -fdiagnostics-color=always -Wall -W -Wextra -Werror -o CMakeFiles\\BackendLibrary.dir\\cache\\cache.cpp.obj -c D:\\THU_21\\2024_Spring\\计算机系统结构\\labs-2021050009\\cache\\cache.cpp",
+  "file": "D:\\THU_21\\2024_Spring\\计算机系统结构\\labs-2021050009\\cache\\cache.cpp",
+  "output": "CMakeFiles\\BackendLibrary.dir\\cache\\cache.cpp.obj"
+},
+{
+  "directory": "D:/THU_21/2024_Spring/计算机系统结构/labs-2021050009/cmake-build-debug",
+  "command": "D:\\IDE\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE -ID:/THU_21/2024_Spring/计算机系统结构/labs-2021050009/include -g -std=c++17 -fdiagnostics-color=always -Wall -W -Wextra -Werror -o CMakeFiles\\processor-test.dir\\program\\processor_test.cpp.obj -c D:\\THU_21\\2024_Spring\\计算机系统结构\\labs-2021050009\\program\\processor_test.cpp",
+  "file": "D:\\THU_21\\2024_Spring\\计算机系统结构\\labs-2021050009\\program\\processor_test.cpp",
+  "output": "CMakeFiles\\processor-test.dir\\program\\processor_test.cpp.obj"
+},
+{
+  "directory": "D:/THU_21/2024_Spring/计算机系统结构/labs-2021050009/cmake-build-debug",
+  "command": "D:\\IDE\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE -ID:/THU_21/2024_Spring/计算机系统结构/labs-2021050009/thirdparty -ID:/THU_21/2024_Spring/计算机系统结构/labs-2021050009/include -g -std=c++17 -fdiagnostics-color=always -Wall -W -Wextra -Werror -o CMakeFiles\\checker.dir\\program\\checker.cpp.obj -c D:\\THU_21\\2024_Spring\\计算机系统结构\\labs-2021050009\\program\\checker.cpp",
+  "file": "D:\\THU_21\\2024_Spring\\计算机系统结构\\labs-2021050009\\program\\checker.cpp",
+  "output": "CMakeFiles\\checker.dir\\program\\checker.cpp.obj"
+},
+{
+  "directory": "D:/THU_21/2024_Spring/计算机系统结构/labs-2021050009/cmake-build-debug",
+  "command": "D:\\IDE\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE -ID:/THU_21/2024_Spring/计算机系统结构/labs-2021050009/include -g -std=c++17 -fdiagnostics-color=always -Wall -W -Wextra -Werror -o CMakeFiles\\CacheExpLibrary.dir\\cache-exp\\associativity.cpp.obj -c D:\\THU_21\\2024_Spring\\计算机系统结构\\labs-2021050009\\cache-exp\\associativity.cpp",
+  "file": "D:\\THU_21\\2024_Spring\\计算机系统结构\\labs-2021050009\\cache-exp\\associativity.cpp",
+  "output": "CMakeFiles\\CacheExpLibrary.dir\\cache-exp\\associativity.cpp.obj"
+},
+{
+  "directory": "D:/THU_21/2024_Spring/计算机系统结构/labs-2021050009/cmake-build-debug",
+  "command": "D:\\IDE\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE -ID:/THU_21/2024_Spring/计算机系统结构/labs-2021050009/include -g -std=c++17 -fdiagnostics-color=always -Wall -W -Wextra -Werror -o CMakeFiles\\CacheExpLibrary.dir\\cache-exp\\block_size.cpp.obj -c D:\\THU_21\\2024_Spring\\计算机系统结构\\labs-2021050009\\cache-exp\\block_size.cpp",
+  "file": "D:\\THU_21\\2024_Spring\\计算机系统结构\\labs-2021050009\\cache-exp\\block_size.cpp",
+  "output": "CMakeFiles\\CacheExpLibrary.dir\\cache-exp\\block_size.cpp.obj"
+},
+{
+  "directory": "D:/THU_21/2024_Spring/计算机系统结构/labs-2021050009/cmake-build-debug",
+  "command": "D:\\IDE\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE -ID:/THU_21/2024_Spring/计算机系统结构/labs-2021050009/include -g -std=c++17 -fdiagnostics-color=always -Wall -W -Wextra -Werror -o CMakeFiles\\CacheExpLibrary.dir\\cache-exp\\cache_size.cpp.obj -c D:\\THU_21\\2024_Spring\\计算机系统结构\\labs-2021050009\\cache-exp\\cache_size.cpp",
+  "file": "D:\\THU_21\\2024_Spring\\计算机系统结构\\labs-2021050009\\cache-exp\\cache_size.cpp",
+  "output": "CMakeFiles\\CacheExpLibrary.dir\\cache-exp\\cache_size.cpp.obj"
+},
+{
+  "directory": "D:/THU_21/2024_Spring/计算机系统结构/labs-2021050009/cmake-build-debug",
+  "command": "D:\\IDE\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE -ID:/THU_21/2024_Spring/计算机系统结构/labs-2021050009/include -g -std=c++17 -fdiagnostics-color=always -Wall -W -Wextra -Werror -o CMakeFiles\\CacheExpLibrary.dir\\cache-exp\\matmul.cpp.obj -c D:\\THU_21\\2024_Spring\\计算机系统结构\\labs-2021050009\\cache-exp\\matmul.cpp",
+  "file": "D:\\THU_21\\2024_Spring\\计算机系统结构\\labs-2021050009\\cache-exp\\matmul.cpp",
+  "output": "CMakeFiles\\CacheExpLibrary.dir\\cache-exp\\matmul.cpp.obj"
+},
+{
+  "directory": "D:/THU_21/2024_Spring/计算机系统结构/labs-2021050009/cmake-build-debug",
+  "command": "D:\\IDE\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE -ID:/THU_21/2024_Spring/计算机系统结构/labs-2021050009/include -g -std=c++17 -fdiagnostics-color=always -Wall -W -Wextra -Werror -o CMakeFiles\\CacheExpLibrary.dir\\cache-exp\\replace_type.cpp.obj -c D:\\THU_21\\2024_Spring\\计算机系统结构\\labs-2021050009\\cache-exp\\replace_type.cpp",
+  "file": "D:\\THU_21\\2024_Spring\\计算机系统结构\\labs-2021050009\\cache-exp\\replace_type.cpp",
+  "output": "CMakeFiles\\CacheExpLibrary.dir\\cache-exp\\replace_type.cpp.obj"
+},
+{
+  "directory": "D:/THU_21/2024_Spring/计算机系统结构/labs-2021050009/cmake-build-debug",
+  "command": "D:\\IDE\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE -ID:/THU_21/2024_Spring/计算机系统结构/labs-2021050009/include -g -std=c++17 -fdiagnostics-color=always -Wall -W -Wextra -Werror -o CMakeFiles\\CacheExpLibrary.dir\\cache-exp\\write_policy.cpp.obj -c D:\\THU_21\\2024_Spring\\计算机系统结构\\labs-2021050009\\cache-exp\\write_policy.cpp",
+  "file": "D:\\THU_21\\2024_Spring\\计算机系统结构\\labs-2021050009\\cache-exp\\write_policy.cpp",
+  "output": "CMakeFiles\\CacheExpLibrary.dir\\cache-exp\\write_policy.cpp.obj"
+},
+{
+  "directory": "D:/THU_21/2024_Spring/计算机系统结构/labs-2021050009/cmake-build-debug",
+  "command": "D:\\IDE\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE -ID:/THU_21/2024_Spring/计算机系统结构/labs-2021050009/thirdparty -ID:/THU_21/2024_Spring/计算机系统结构/labs-2021050009/include -g -std=c++17 -fdiagnostics-color=always -Wall -W -Wextra -Werror -o CMakeFiles\\cache_checker.dir\\program\\cache_checker.cpp.obj -c D:\\THU_21\\2024_Spring\\计算机系统结构\\labs-2021050009\\program\\cache_checker.cpp",
+  "file": "D:\\THU_21\\2024_Spring\\计算机系统结构\\labs-2021050009\\program\\cache_checker.cpp",
+  "output": "CMakeFiles\\cache_checker.dir\\program\\cache_checker.cpp.obj"
+},
+{
+  "directory": "D:/THU_21/2024_Spring/计算机系统结构/labs-2021050009/cmake-build-debug",
+  "command": "D:\\IDE\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE -ID:/THU_21/2024_Spring/计算机系统结构/labs-2021050009/thirdparty -ID:/THU_21/2024_Spring/计算机系统结构/labs-2021050009/include -g -std=c++17 -fdiagnostics-color=always -Wall -W -Wextra -Werror -o CMakeFiles\\runner.dir\\program\\cache_test.cpp.obj -c D:\\THU_21\\2024_Spring\\计算机系统结构\\labs-2021050009\\program\\cache_test.cpp",
+  "file": "D:\\THU_21\\2024_Spring\\计算机系统结构\\labs-2021050009\\program\\cache_test.cpp",
+  "output": "CMakeFiles\\runner.dir\\program\\cache_test.cpp.obj"
+},
+{
+  "directory": "D:/THU_21/2024_Spring/计算机系统结构/labs-2021050009/cmake-build-debug",
+  "command": "riscv64-unknown-elf-g++ -g -std=c++17 -fdiagnostics-color=always -march=rv32im -mabi=ilp32 -O2 -nostdlib -fno-PIC -mcmodel=medany -fno-builtin -o test\\CMakeFiles\\baseline_matmul.dir\\baseline_matmul.cpp.obj -c D:\\THU_21\\2024_Spring\\计算机系统结构\\labs-2021050009\\test\\baseline_matmul.cpp",
+  "file": "D:\\THU_21\\2024_Spring\\计算机系统结构\\labs-2021050009\\test\\baseline_matmul.cpp",
+  "output": "test\\CMakeFiles\\baseline_matmul.dir\\baseline_matmul.cpp.obj"
+},
+{
+  "directory": "D:/THU_21/2024_Spring/计算机系统结构/labs-2021050009/cmake-build-debug",
+  "command": "riscv64-unknown-elf-g++ -g -std=c++17 -fdiagnostics-color=always -march=rv32im -mabi=ilp32 -O2 -nostdlib -fno-PIC -mcmodel=medany -fno-builtin -o test\\CMakeFiles\\matmul.dir\\matmul.cpp.obj -c D:\\THU_21\\2024_Spring\\计算机系统结构\\labs-2021050009\\test\\matmul.cpp",
+  "file": "D:\\THU_21\\2024_Spring\\计算机系统结构\\labs-2021050009\\test\\matmul.cpp",
+  "output": "test\\CMakeFiles\\matmul.dir\\matmul.cpp.obj"
+},
+{
+  "directory": "D:/THU_21/2024_Spring/计算机系统结构/labs-2021050009/cmake-build-debug",
+  "command": "riscv64-unknown-elf-g++ -g -std=c++17 -fdiagnostics-color=always -march=rv32im -mabi=ilp32 -O2 -nostdlib -fno-PIC -mcmodel=medany -fno-builtin -o test\\CMakeFiles\\merge_sort.dir\\merge_sort.cpp.obj -c D:\\THU_21\\2024_Spring\\计算机系统结构\\labs-2021050009\\test\\merge_sort.cpp",
+  "file": "D:\\THU_21\\2024_Spring\\计算机系统结构\\labs-2021050009\\test\\merge_sort.cpp",
+  "output": "test\\CMakeFiles\\merge_sort.dir\\merge_sort.cpp.obj"
+},
+{
+  "directory": "D:/THU_21/2024_Spring/计算机系统结构/labs-2021050009/cmake-build-debug",
+  "command": "riscv64-unknown-elf-g++ -g -std=c++17 -fdiagnostics-color=always -march=rv32im -mabi=ilp32 -O2 -nostdlib -fno-PIC -mcmodel=medany -fno-builtin -o test\\CMakeFiles\\ntt.dir\\ntt.cpp.obj -c D:\\THU_21\\2024_Spring\\计算机系统结构\\labs-2021050009\\test\\ntt.cpp",
+  "file": "D:\\THU_21\\2024_Spring\\计算机系统结构\\labs-2021050009\\test\\ntt.cpp",
+  "output": "test\\CMakeFiles\\ntt.dir\\ntt.cpp.obj"
+},
+{
+  "directory": "D:/THU_21/2024_Spring/计算机系统结构/labs-2021050009/cmake-build-debug",
+  "command": "riscv64-unknown-elf-g++ -g -std=c++17 -fdiagnostics-color=always -march=rv32im -mabi=ilp32 -O2 -nostdlib -fno-PIC -mcmodel=medany -fno-builtin -o test\\CMakeFiles\\selection_sort.dir\\selection_sort.cpp.obj -c D:\\THU_21\\2024_Spring\\计算机系统结构\\labs-2021050009\\test\\selection_sort.cpp",
+  "file": "D:\\THU_21\\2024_Spring\\计算机系统结构\\labs-2021050009\\test\\selection_sort.cpp",
+  "output": "test\\CMakeFiles\\selection_sort.dir\\selection_sort.cpp.obj"
+}
+]
