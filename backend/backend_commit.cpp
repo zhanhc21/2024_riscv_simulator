@@ -14,7 +14,7 @@ bool Backend::dispatchInstruction([[maybe_unused]] const Instruction &inst) {
     // NOTE: FUType::NONE only goes into ROB but not Reservation Stations
     // Check rob
     if (!rob.canPush()) {
-        Logger::Error("ROB can't push");
+        // Logger::Error("ROB can't push");
         return false;
     }
 
