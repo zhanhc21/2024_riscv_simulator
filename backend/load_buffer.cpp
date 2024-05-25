@@ -36,6 +36,7 @@ void LoadBuffer::push(unsigned addr, unsigned robIdx) {
  */
 LoadBufferSlot LoadBuffer::pop(unsigned robIdx) {
     Logger::Info("Load buffer pop");
+    Logger::Info("Address: %08x, robIdx: %u\n", buffer[robIdx].loadAddress, robIdx);
     buffer[robIdx].valid = false;
     return buffer[robIdx];
 }
@@ -63,8 +64,9 @@ void LoadBuffer::check([[maybe_unused]] unsigned addr,
     // 完成 Load Buffer 的检验逻辑，寻找顺序错误的 load 指令
     // 按照规则查询顺序在该 Store 指令之后，但已经完成推测执行的 Load 指令
     // 将这些 load 指令的 load buffer 表项设置为 invalid
+    Logger::Info("Load buffer check");
     for (auto &slot : buffer) {
-        if (!slot.valid) {
+        if (slot.valid) {
             if ((robIdx < slot.robIdx && slot.robIdx < robPopPtr) ||
                 (robPopPtr <= robIdx && slot.robIdx < robPopPtr) ||
                 (robPopPtr <= robIdx && robIdx < slot.robIdx)) {

@@ -47,20 +47,21 @@ void ReservationStation<size>::insertInstruction(
     [[maybe_unused]] unsigned robIdx,
     [[maybe_unused]] RegisterFile *const regFile,
     [[maybe_unused]] const ReorderBuffer &reorderBuffer) {
+    // 若有 slot 空闲，执行插入
+    // 插入时，设置两个寄存器读取端口是否已经唤醒，以及对应值，必要时从 ROB 中读取。
+    // 寄存器设置 busy
+    // slot busy，返回
     for (auto &slot : buffer) {
         if (slot.busy) {
             continue;
         }
 
-        // Dispatch instruction to this slot
         auto rs1 = inst.getRs1();
-        // replace register with reservation station
+
         if (regFile->isBusy(rs1)) {
             auto busyIndex = regFile->getBusyIndex(rs1);
 
-            // set rob / value / wake up
             slot.readPort1.robIdx = busyIndex;
-            // value in rob is ready
             if (reorderBuffer.checkReady(busyIndex)) {
                 slot.readPort1.value = reorderBuffer.read(busyIndex);
                 slot.readPort1.waitForWakeup = false;
@@ -68,8 +69,6 @@ void ReservationStation<size>::insertInstruction(
                 slot.readPort1.waitForWakeup = true;
             }
         } else {
-            // reg mark busy
-            regFile->markBusy(rs1, robIdx);
             slot.readPort1.value = regFile->read(rs1);
             slot.readPort1.waitForWakeup = false;
         }
@@ -86,7 +85,6 @@ void ReservationStation<size>::insertInstruction(
                 slot.readPort2.waitForWakeup = true;
             }
         } else {
-            regFile->markBusy(rs1, robIdx);
             slot.readPort2.value = regFile->read(rs2);
             slot.readPort2.waitForWakeup = false;
         }
@@ -117,16 +115,28 @@ void ReservationStation<size>::wakeup(
             slot.readPort2.waitForWakeup = false;
         }
     }
-    zip();
 }
 
 template <unsigned size>
 bool ReservationStation<size>::canIssue() const {
     // Decide whether an issueSlot is ready to issue.
     // Warning: Store instructions must be issued in order!!
-    for (auto &slot : buffer)
-        if (slot.busy && !slot.readPort1.waitForWakeup && !slot.readPort2.waitForWakeup)
-            return true;
+    for (auto &slot : buffer) {
+        // Store
+        if (slot.busy && (slot.inst == RV32I::SB || slot.inst == RV32I::SH || slot.inst == RV32I::SW)) {
+            if (!slot.readPort1.waitForWakeup && !slot.readPort2.waitForWakeup) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+        // Not Store
+        else if (slot.busy) {
+            if (!slot.readPort1.waitForWakeup && !slot.readPort2.waitForWakeup) {
+                return true;
+            }
+        }
+    }
     return false;
 }
 
@@ -135,10 +145,26 @@ IssueSlot ReservationStation<size>::issue() {
     // Issue a ready issue slot and remove it from reservation station.
     // Warning: Store instructions must be issued in order!!
     for (auto &slot : buffer) {
-        if (slot.busy && !slot.readPort1.waitForWakeup && !slot.readPort2.waitForWakeup) {
-            IssueSlot ret = slot;
-            slot.busy = false;
-            return ret;
+        // Store
+        if (slot.busy && (slot.inst == RV32I::SB || slot.inst == RV32I::SH || slot.inst == RV32I::SW)) {
+            if (!slot.readPort1.waitForWakeup && !slot.readPort2.waitForWakeup) {
+                IssueSlot ret = slot;
+                slot.busy = false;
+                zip();
+                return ret;
+            } else {
+                Logger::Error("No available slots for issuing");
+                std::__throw_runtime_error("No available slots for issuing");
+            }
+        }
+        // Not Store
+        else if (slot.busy) {
+            if (!slot.readPort1.waitForWakeup && !slot.readPort2.waitForWakeup) {
+                IssueSlot ret = slot;
+                slot.busy = false;
+                zip();
+                return ret;
+            }
         }
     }
     Logger::Error("No available slots for issuing");
@@ -155,10 +181,14 @@ void ReservationStation<size>::flush() {
 template <unsigned size>
 void ReservationStation<size>::zip() {
     auto index = 0;
+    IssueSlot zipped_buffer[size] = {};
     for (auto slot : buffer) {
         if (slot.busy) {
-            buffer[index] = slot;
+            zipped_buffer[index] = slot;
             ++index;
         }
+    }
+    for (unsigned i=0; i<size; ++i) {
+        buffer[i] = zipped_buffer[i];
     }
 }

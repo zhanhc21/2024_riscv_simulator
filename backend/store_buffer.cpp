@@ -79,22 +79,29 @@ std::optional<unsigned> StoreBuffer::query(
     [[maybe_unused]] unsigned robIdx,
     [[maybe_unused]] unsigned robPopPtr) {
     // 需要倒序遍历 Store Buffer 的全部项目, 找到第一个 rob 顺序（注意不是序号）在当前指令之前, 且地址相同的条目进行返回
+    Logger::Info("Store buffer query");
     auto tail = pushPtr - 1;
     if (pushPtr == 0) {
         tail = ROB_SIZE - 1;
     }
     unsigned mask = 0xFFFFFFFC;
-    bool mark_current = false;
-    while (tail >= popPtr) {
-        if ((buffer[tail].storeAddress & mask) == (addr & mask) &&
-            buffer[tail].valid &&
-            mark_current) {
+    // push ptr 不一定大于 pop ptr
+    while (tail != popPtr) {
+        if (buffer[tail].valid &&
+            (buffer[tail].storeAddress & mask) == (addr & mask)) {
+            Logger::Info("return rob id %u", buffer[tail].robIdx);
             return std::make_optional(buffer[tail].storeData);
         }
-        if (buffer[tail].robIdx == robIdx && buffer[tail].valid) {
-            mark_current = true;
+        if (tail == 0) {
+            tail = ROB_SIZE;
         }
         --tail;
     }
+    if (buffer[tail].valid &&
+        (buffer[tail].storeAddress & mask) == (addr & mask)) {
+        Logger::Info("return rob id %u", buffer[tail].robIdx);
+        return std::make_optional(buffer[tail].storeData);
+    }
+    Logger::Info("return null opt");
     return std::nullopt;
 }
