@@ -104,6 +104,5 @@ void FrontendWithPredict::bpuBackendUpdate(const BpuUpdateData &x) {
  */
 void FrontendWithPredict::reset(const std::vector<unsigned int> &inst,
                                 unsigned int entry) {
-    Frontend::reset(inst, entry);
-    // Optional TODO: Do your reset here
+    // Optional Do your reset here
 }

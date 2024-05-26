@@ -202,13 +202,17 @@ bool Backend::commitInstruction([[maybe_unused]] const ROBEntry &entry,
         frontend.jump(entry.state.actualTaken ? entry.state.jumpTarget : entry.inst.pc + 4);
         flush();
     }
+
     if (entry.inst == BEQ || entry.inst == BNE || entry.inst == BLT ||
         entry.inst == BGE || entry.inst == BLTU || entry.inst == BGEU) {
-        BpuUpdateData data{};
-        data.pc = entry.inst.pc;
-        data.jumpTarget = entry.state.jumpTarget;
-        data.isBranch = true;
-        data.branchTaken = entry.state.actualTaken;
+        BpuUpdateData data{
+            .pc = entry.inst.pc,
+            .isCall = false,
+            .isReturn = false,
+            .isBranch = true,
+            .branchTaken = entry.state.actualTaken,
+            .jumpTarget = entry.state.jumpTarget
+        };
         frontend.bpuBackendUpdate(data);
     }
 
