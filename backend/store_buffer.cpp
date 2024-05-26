@@ -86,22 +86,34 @@ std::optional<unsigned> StoreBuffer::query(
     }
     unsigned mask = 0xFFFFFFFC;
     // push ptr 不一定大于 pop ptr
-    while (tail != popPtr) {
+//    while (tail != popPtr) {
+//        if (buffer[tail].valid &&
+//            (buffer[tail].storeAddress & mask) == (addr & mask)) {
+//            Logger::Info("return rob id %u", buffer[tail].robIdx);
+//            return std::make_optional(buffer[tail].storeData);
+//        }
+//        if (tail == 0) {
+//            tail = ROB_SIZE;
+//        }
+//        --tail;
+//    }
+//    if (buffer[tail].valid &&
+//        (buffer[tail].storeAddress & mask) == (addr & mask)) {
+//        Logger::Info("return rob id %u", buffer[tail].robIdx);
+//        return std::make_optional(buffer[tail].storeData);
+//    }
+    while (tail >= popPtr) {
         if (buffer[tail].valid &&
             (buffer[tail].storeAddress & mask) == (addr & mask)) {
             Logger::Info("return rob id %u", buffer[tail].robIdx);
             return std::make_optional(buffer[tail].storeData);
         }
         if (tail == 0) {
-            tail = ROB_SIZE;
+            break;
         }
         --tail;
     }
-    if (buffer[tail].valid &&
-        (buffer[tail].storeAddress & mask) == (addr & mask)) {
-        Logger::Info("return rob id %u", buffer[tail].robIdx);
-        return std::make_optional(buffer[tail].storeData);
-    }
+
     Logger::Info("return null opt");
     return std::nullopt;
 }

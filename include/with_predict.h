@@ -1,10 +1,18 @@
 #include "processor.h"
 
+enum btb_state {
+    STRONG_NOT_TAKEN = 0,
+    WEAK_NOT_TAKEN = 1,
+    WEAK_TAKEN = 2,
+    STRONG_TAKEN = 3
+};
+
 struct BTBEntry {
     unsigned pc;
     unsigned target;
     unsigned counter;
     bool valid;
+    btb_state state;
 };
 
 class FrontendWithPredict : public Frontend {

@@ -167,15 +167,6 @@ bool Backend::commitInstruction([[maybe_unused]] const ROBEntry &entry,
     bool executeExit = false;
     using namespace RV32I;
 
-    std::stringstream ss;
-    ss << entry.inst;
-
-    Logger::Info("Committing instruction %s: ", ss.str().c_str());
-    Logger::Info("ROB index: %u", rob.getPopPtr());
-    Logger::Info("rd: %s, value = %u",
-                 xreg_name[entry.inst.getRd()].c_str(),
-                 entry.state.result);
-
     StoreBufferSlot stSlot{};
     LoadBufferSlot ldSlot{};
 
@@ -190,16 +181,11 @@ bool Backend::commitInstruction([[maybe_unused]] const ROBEntry &entry,
             return false;
         } else {
             storeBuffer.pop();
-            Logger::Info("PC = 0x%08x, store to 0x%08x, data = %d",
-                         entry.inst.pc,
-                         stSlot.storeAddress,
-                         stSlot.storeData);
         }
     } else if (entry.inst == LB || entry.inst == LBU || entry.inst == LH ||
                entry.inst == LHU || entry.inst == LW) {
         ldSlot = loadBuffer.pop(rob.getPopPtr());
         if (ldSlot.invalidate) {
-            Logger::Info("Out of order load at PC = 0x08x", entry.inst.pc);
             frontend.jump(entry.inst.pc);
             flush();
             return false;
@@ -211,22 +197,20 @@ bool Backend::commitInstruction([[maybe_unused]] const ROBEntry &entry,
     }
 
     regFile->write(entry.inst.getRd(), entry.state.result, rob.getPopPtr());
-
-    if (entry.inst.getRd() != 0u)
-        Logger::Info("PC = 0x%08x, write reg %d, data = %d",
-                     entry.inst.pc,
-                     entry.inst.getRd(),
-                     entry.state.result);
-
     rob.pop();
     if (entry.state.mispredict) {
-        Logger::Info("PC = 0x%08x, jump to 0x%08x",
-                     entry.inst.pc,
-                     entry.state.actualTaken ? entry.state.jumpTarget
-                                             : entry.inst.pc + 4);
-        frontend.jump(entry.state.actualTaken ? entry.state.jumpTarget
-                                              : entry.inst.pc + 4);
+        frontend.jump(entry.state.actualTaken ? entry.state.jumpTarget : entry.inst.pc + 4);
         flush();
     }
+    if (entry.inst == BEQ || entry.inst == BNE || entry.inst == BLT ||
+        entry.inst == BGE || entry.inst == BLTU || entry.inst == BGEU) {
+        BpuUpdateData data{};
+        data.pc = entry.inst.pc;
+        data.jumpTarget = entry.state.jumpTarget;
+        data.isBranch = true;
+        data.branchTaken = entry.state.actualTaken;
+        frontend.bpuBackendUpdate(data);
+    }
+
     return executeExit;
 }
