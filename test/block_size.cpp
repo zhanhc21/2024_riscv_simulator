@@ -9,9 +9,9 @@ constexpr int totalRound = 2;
 int main(int argc, char **argv) {
     auto testStep = ((unsigned) argv[0]);
     int sum = 0;
+    unsigned index = 0;
 
     for (int i = 0; i < totalRound; i++) {
-        unsigned index = 0;
         // 相同访问次数
         for (unsigned j = 0; j < 2048; ++j) {
             sum += arr[index];

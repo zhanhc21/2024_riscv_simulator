@@ -12,7 +12,7 @@ unsigned MeasureCacheBlockSize(ProcessorAbstract *p) {
     unsigned testTime[6];
 
     for (int i = 0; i < 6; i++) {
-        testTime[i] = execute(p, "./test/cache_line_size", 1, stepSize[i]);
+        testTime[i] = execute(p, "./test/block_size", 1, stepSize[i]);
     }
 
     for (int i = 0; i < 6; i++) {
@@ -22,6 +22,8 @@ unsigned MeasureCacheBlockSize(ProcessorAbstract *p) {
             testTime[i]);
     }
 
+    printf("\n");
+
     int mx = -1;
     int idx = 0;
 
@@ -29,7 +31,7 @@ unsigned MeasureCacheBlockSize(ProcessorAbstract *p) {
         int delta = ((int) testTime[i + 1]) - ((int) testTime[i]);
         if (delta > mx) {
             mx = delta;
-            idx = i + 1;
+            idx = i;
         }
     }
 
