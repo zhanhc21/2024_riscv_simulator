@@ -31,9 +31,8 @@ unsigned MeasureCacheBlockSize(ProcessorAbstract *p) {
         int delta = ((int) testTime[i + 1]) - ((int) testTime[i]);
         if (delta > mx) {
             mx = delta;
-            idx = i;
+            idx = i+1;
         }
     }
-
     return stepSize[idx];
 }
