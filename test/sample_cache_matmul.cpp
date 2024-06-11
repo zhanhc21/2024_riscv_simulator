@@ -16,8 +16,9 @@ int main(int argc, char **argv) {
     }
 
     for (int i = 0; i < MATRIX_SIZE; i++)
-        for (int j = 0; j < MATRIX_SIZE; j++)
-            for (int k = 0; k < MATRIX_SIZE; k++) C[i][j] += A[i][k] * B[k][j];
+        for (int k = 0; k < MATRIX_SIZE; k++)
+            for (int j = 0; j < MATRIX_SIZE; j++)
+                C[i][j] += A[i][k] * B[k][j];
 
     unsigned sum = 0;
     for (int i = 0; i < MATRIX_SIZE; ++i) {
