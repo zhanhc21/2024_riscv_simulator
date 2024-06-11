@@ -9,7 +9,31 @@ unsigned MeasureCacheAssociativity([[maybe_unused]] ProcessorAbstract *p,
     // The associativity will be ranged from 1 to 8, and must be a power of 2
     // Return the accurate value
     
-    [[maybe_unused]] unsigned testAsso[6] = {1, 2, 4, 8, 16, 32};
+    unsigned associate[6] = {1, 2, 4, 8, 16, 32};
+    unsigned testTime[6];
 
-    return 1;
+    for (int i = 0; i < 6; i++) {
+        testTime[i] = execute(p, "./test/block_size", cacheSize, associate[i]);
+    }
+
+    for (int i = 0; i < 6; i++) {
+        Logger::Warn(
+            "With step = %u, program simulator ran %u cycles.",
+            associate[i],
+            testTime[i]);
+    }
+
+    printf("\n");
+
+    int mx = -1;
+    int idx = 0;
+
+    for (int i = 0; i < 5; i++) {
+        int delta = ((int) testTime[i + 1]) - ((int) testTime[i]);
+        if (delta > mx) {
+            mx = delta;
+            idx = i;
+        }
+    }
+    return associate[idx];
 }
