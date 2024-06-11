@@ -9,8 +9,10 @@ int main(int argc, char **argv) {
     int block_num = 1 << (asso + 2);
     int block_size = (2 * argc) / block_num;
 
-    for (int i = 0; i < block_num * block_size; i += 2 * block_size) {
-        sum += arr[i];
+    for (int i = 0; i < block_num; i += 2) {
+        for (int j = 0; j < block_size; j++) {
+            sum += arr[i * block_size + j];
+        }
     }
 
     asm volatile(".word 0x0000000b");
