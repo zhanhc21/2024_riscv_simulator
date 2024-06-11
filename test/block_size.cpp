@@ -11,7 +11,7 @@ int main(int argc, char **argv) {
     for (int i = 0; i < totalRound; i++) {
         unsigned index = 0;
         // 相同访问次数
-        for (unsigned j = 0; j < 16; j++) {
+        for (unsigned j = 0; j < 8; j++) {
             sum += arr[index];
             index = (index + testStep) % ARRAY_SIZE;
         }
