@@ -5,10 +5,10 @@ constexpr int totalRound = 8;
 
 int main(int argc, char **argv) {
     auto cache_size = ((unsigned) argv[0]);
-    auto asso = ((unsigned) argv[1]);
+    auto n = ((unsigned) argv[1]);
 
     int sum = 0;
-    int block_num = 1 << (asso + 2);
+    int block_num = 1 << (n + 2);
     unsigned block_size = (2 * cache_size) / block_num;
 
     for (int i = 0; i < block_num; i += 2) {

@@ -10,10 +10,11 @@ unsigned MeasureCacheAssociativity([[maybe_unused]] ProcessorAbstract *p,
     // Return the accurate value
     
     unsigned associate[6] = {1, 2, 4, 8, 16, 32};
+    unsigned n[6] = {0, 1, 2, 3, 4, 5};
     unsigned testTime[6];
 
     for (int i = 0; i < 6; i++) {
-        testTime[i] = execute(p, "./test/associate", 2,  cacheSize, associate[i]);
+        testTime[i] = execute(p, "./test/associate", 2,  cacheSize, n[i]);
     }
 
     for (int i = 0; i < 6; i++) {
