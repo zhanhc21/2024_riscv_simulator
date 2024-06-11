@@ -1,7 +1,6 @@
 constexpr unsigned ARRAY_SIZE = (1u << 20u);
 char arr[ARRAY_SIZE];
 
-constexpr int totalRound = 8;
 
 int main(int argc, char **argv) {
     auto cache_size = ((unsigned) argv[0]);
