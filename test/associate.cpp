@@ -1,4 +1,4 @@
-constexpr unsigned ARRAY_SIZE = (1u << 20u);
+constexpr unsigned ARRAY_SIZE = (1u << 13u);
 char arr[ARRAY_SIZE];
 
 
