@@ -8,14 +8,21 @@ int main(int argc, char **argv) {
 
     int sum = 0;
     int block_num = 1 << (n + 2);
-    // unsigned block_size = (2 * cache_size) / block_num;
-    unsigned block_size = 4096 / block_num;
+    unsigned block_size = (2 * cache_size) / block_num;
+    int round = 8;
+    // unsigned block_size = 4096 / block_num;
 
-    for (int i = 0; i < block_num; i += 2) {
-        for (int j = 0; j < block_size; j++) {
-            sum += arr[i * block_size + j];
+    for (int j = 0; j < round; j++) {
+        for (int i = 0; i < block_num; i += 2) {
+            sum += arr[i * block_size];
         }
     }
+
+//    for (int i = 0; i < block_size; i++) {
+//        for (unsigned j = 0; j < 2 * cache_size; j += block_size * 2) {
+//            sum += arr[j + i];
+//        }
+//    }
 
     asm volatile(".word 0x0000000b");
     return sum;
