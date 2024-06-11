@@ -28,17 +28,16 @@ constexpr int totalTime = 8;
 constexpr int totalRound = 512;
 
 int main(int argc, char **argv) {
-    auto testSize = ((unsigned) argv[1]);
-    unsigned blocks = 1<<(testSize+2);
-    unsigned blocksize = ARRAY_SIZE/blocks;
+    auto cache_size = ((unsigned) argv[0]);
+    auto n = ((unsigned) argv[1]);
+    unsigned block_num = 1 << (n + 2);
+    unsigned block_size = (cache_size * 2) / block_num;
     int sum = 0;
-    //unsigned step = testSize / totalTime;
 
-    for (int i = 0; i < blocksize; i++)
-        for (unsigned j = 0; j < ARRAY_SIZE; j += blocksize*2) sum += arr[j];
+    for (int i = 0; i < block_size; i++)
+        for (unsigned j = 0; j < block_num; j += 2)
+            sum += arr[j * block_size];
 
-    asm volatile(".word 0x0000000b"  // exit mark
-    );
-
+    asm volatile(".word 0x0000000b");
     return sum;
 }
