@@ -18,7 +18,7 @@ unsigned MeasureCacheAssociativity([[maybe_unused]] ProcessorAbstract *p,
 
     for (int i = 0; i < 6; i++) {
         Logger::Warn(
-            "With step = %u, program simulator ran %u cycles.",
+            "With assoc = %u, program simulator ran %u cycles.",
             associate[i],
             testTime[i]);
     }
@@ -32,7 +32,7 @@ unsigned MeasureCacheAssociativity([[maybe_unused]] ProcessorAbstract *p,
         int delta = ((int) testTime[i + 1]) - ((int) testTime[i]);
         if (delta > mx) {
             mx = delta;
-            idx = i;
+            idx = i + 1;
         }
     }
     return associate[idx];
