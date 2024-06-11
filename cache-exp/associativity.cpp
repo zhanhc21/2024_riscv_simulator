@@ -13,7 +13,7 @@ unsigned MeasureCacheAssociativity([[maybe_unused]] ProcessorAbstract *p,
     unsigned testTime[6];
 
     for (int i = 0; i < 6; i++) {
-        testTime[i] = execute(p, "./test/block_size", cacheSize, associate[i]);
+        testTime[i] = execute(p, "./test/associate", cacheSize, associate[i]);
     }
 
     for (int i = 0; i < 6; i++) {

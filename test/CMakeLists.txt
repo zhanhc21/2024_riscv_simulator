@@ -31,8 +31,7 @@ foreach(src ${CPP_SRC_LIST})
 
     message(STATUS "Found test program " ${target_name})
 
-    add_executable(${target_name} ${src}
-            associate.cpp)
+    add_executable(${target_name} ${src})
     set_target_properties(${target_name} PROPERTIES COMPILE_OPTIONS "${RISCV_COMPILE_OPTIONS}")
     target_link_options(${target_name} PRIVATE -Ttext 0x80000000)
 
