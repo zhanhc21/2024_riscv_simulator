@@ -1,4 +1,4 @@
-毛导师，计系构のkamisama，此处 @[momona06](https://github.com/momona06)
+圣，计系构のkamisama，此处 [@CHEN Xinsheng](https://github.com/CHEN-Xinsheng)
 # Tomasulo 模拟器
 
 2024 计算机系统结构 Tomasulo 模拟器实验框架
